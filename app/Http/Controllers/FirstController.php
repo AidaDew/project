@@ -8,8 +8,9 @@ class FirstController extends Controller
 {
     public function index(){
         return 'Главная страница';
-        $news = News::all();
-        dump($news);
+        $news = News::create([
+            'name' => 'London to Paris',
+        ]);
     }
 
 }

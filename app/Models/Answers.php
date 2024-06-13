@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Answers extends Model
 {
-    protected $table='answers';
-    protected $primaryKey = 'id';
-    protected $guarded=[];
+    protected $fillable = [
+        'name', 'phone', 'email','question_id', 'answer'
+    ];
 }
