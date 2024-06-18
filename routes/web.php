@@ -13,25 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'FirstController@index' );
-
-Route::get('/about_the_institution', function () {
-    return 'Об учреждении';
+Route::get('/', function () {
+    return view('index');
 });
 
-Route::get('/services', function () {
-    return 'Услуги';
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/news', function () {
+    return view('news');
 });
 
 Route::get('/specialists', function () {
-    return 'Специалисты';
+    return view('sotrudniki');
 });
 
 Route::get('/patients', function () {
-    return 'Пациентам';
+    return view('patients');
 });
 
-Route::get('/contacts', function () {
-    return 'Контакты';
-});
+
 

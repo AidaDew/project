@@ -24,9 +24,10 @@ class NewsResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
+                    ->label('заголовок')
+                    ->required(),
                 Forms\Components\MarkdownEditor::make('content')
+                    ->label('текст')
                     ->required(),
             ]);
     }

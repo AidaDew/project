@@ -22,18 +22,17 @@ class ReviewsResource extends Resource
             ->schema([
                 //
                 Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
+                    ->required(),
                 Forms\Components\TextInput::make('email')
                     ->label('электронный адрес')
                     ->email()
-                    ->required()
-                    ->maxLength(255),
+                    ->required(),
                 Forms\Components\TextInput::make('phone')
                     ->label('номер телефона')
                     ->tel()
                     ->required(),
                 Forms\Components\MarkdownEditor::make('reviews')
+                    ->label('отзыв')
                     ->required(),
             ]);
     }

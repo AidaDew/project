@@ -25,18 +25,18 @@ class AnswersResource extends Resource
             ->schema([
                 //
                 Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
+                    ->label('имя')
+                    ->required(),
                 Forms\Components\TextInput::make('email')
                     ->label('электронная почта')
                     ->email()
-                    ->required()
-                    ->maxLength(255),
+                    ->required(),
                 Forms\Components\TextInput::make('phone')
                     ->label('номер телефона')
                     ->tel()
                     ->required(),
                 Forms\Components\MarkdownEditor::make('answer')
+                    ->label('ответ ')
                     ->required(),
             ]);
     }
